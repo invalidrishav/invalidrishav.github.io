@@ -1,0 +1,128 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    overflow: hidden;
+    display: block;
+}
+.navbar
+{
+    background: #181818;
+    width: 60px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 3;
+    min-height: 500px;
+}
+.navbar nav
+{
+    display: block;
+    text-align: center;
+}
+.logo
+{
+    background: rgba(255, 255, 255, 0.1);
+    display: block;
+    padding: 0;
+}
+.logo  img
+{
+    display: block;
+    margin: 8px -10px;
+    width: 85px;
+    height: auto;
+}
+.navbar nav a
+{
+    font-size: 22px;
+    font-family: 'Helvetica Neue', Helvetica;
+    color: #a5a5a5;
+    margin-bottom: 15px;
+    display: block;
+    line-height: 50px;
+    height: 51px;
+    position: relative;
+    text-decoration: none;
+}
+.navbar nav a i
+{
+    transition: all 300ms ease-out;
+}
+.navbar nav a:hover i
+{
+    opacity: 0;
+}
+.navbar nav a:active,
+.navbar nav a:hover
+{
+    color: #08fdd8;
+}
+.navbar nav a::after
+{
+    content: '';
+    font-size: 9px;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;   
+}
+.navbar nav a:first-child::after
+{
+    content: 'HOME';
+}
+.navbar nav a:first-child + a::after
+{
+    content: 'ABOUT';
+}
+.navbar nav a:first-child + a + a::after
+{
+    content: 'SKILLS';
+}
+.navbar nav a:first-child + a + a + a::after
+{
+    content: 'WORK';
+}
+.navbar nav a:first-child + a + a + a + a::after
+{
+    content: 'CONTACT';
+}
+.navbar nav a:hover::after
+{
+    opacity: 1;
+}
+/* NAVBAR SOCIAL LINKS */
+.navbar ul
+{
+    display: block;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 20px;
+}
+.navbar ul li a
+{
+    padding: 7px 0;
+    display: block;
+    font-size: 15px;
+    line-height: 16px;
+    color: #909096;
+}
+.navbar ul li a:hover
+{
+    color: #08fdd8;
+}

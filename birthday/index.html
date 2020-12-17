@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+</head>
+<body>
+    <section>
+        <div class="eclipse1 drag"></div>
+        <div class="eclipse2 drag"></div>
+        <div class="eclipse3 drag"></div>
+        <div class="birthdayHeading drag">happy birthday to me</div>
+        <div class="box drag">
+            <p>scroll down</p>
+        </div>
+        <div class="downArrow drag">
+            <img src="./down.svg" alt="go down">
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            $(".drag").draggable();
+        })
+    </script>
+</body>
+</html>

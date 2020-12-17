@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <link rel="stylesheet" href="./styles/testNavbar.css">
+    <link rel="stylesheet" href="./styles/contact.css">
+    <link rel="stylesheet" type="text/css" href="./styles/stylesheet.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact me anytime</title>
+  </head>
+  <body>
+    <!--##########################-->
+    <!--#######  PRE LOAD  #######-->
+    <!--##########################-->
+    <div class="preload w3-animate-zoom">
+      <div class="load">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <h1 id="loadingText">loading</h1>
+    </div>
+    <!--##########################-->
+    <!--#######  NAV  BAR  #######-->
+    <!--##########################-->
+    <div class="navbar">
+      <!-- NAVBAR LOGO -->
+      <a href="index.html" class="logo">
+          <img src="res/R_logo2.png" alt="logo">
+      </a>
+      <!-- NAVBAR ICONS -->
+      <nav class=".icons">
+          <a href="index.html" class="home">
+              <i class="fa fa-home"></i>
+          </a>
+          <a href="about.html" class="about">
+              <i class="fa fa-user-o"></i>
+          </a>
+          <a href="skills.html" class="skill">
+              <i class="fa fa-edit"></i>
+          </a>
+          <a href="project.html" class="work">
+              <i class="fa fa-eye"></i>
+          </a>
+          <a href="contact.html" class="contact">
+              <i class="fa fa-envelope-o"></i>
+          </a>
+      </nav>
+      <!-- MOBILE LNKS -->
+      <ul>
+          <li>
+              <a href="#">
+                  <i class="fa fa-twitter"></i>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  <i class="fa fa-linkedin"></i>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  <i class="fa fa-facebook"></i>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  <i class="fa fa-github"></i>
+              </a>
+          </li>
+      </ul>
+  </div>
+    <!--##########################-->
+    <!--####### CONTACT ME #######-->
+    <!--##########################-->
+
+    <div class="w3-animate-zoom">
+      <div class="contact-header">
+        <span style="--i: 1">c</span>
+        <span style="--i: 2">o</span>
+        <span style="--i: 3">n</span>
+        <span style="--i: 4">t</span>
+        <span style="--i: 5">a</span>
+        <span style="--i: 6">c</span>
+        <span style="--i: 7">t</span>
+        &nbsp;
+        <span style="--i: 8">m</span>
+        <span style="--i: 9">e</span>
+      </div>
+      <div class="contact-subtext">Anytime, anywhere, easy!</div>
+    
+      <!--##### SUBMIT PAGE#####-->
+      <div class="subtext-for-contact">
+        I am interested in freelance opportunities - especially ambitious for
+        medium projects. However, if you have other request or question, feel free
+        to contact me using the form below.
+      </div>
+      <div class="form">
+        <form
+          id="form-section"
+          action="mailto:rishav.m.19.02@gmail.com"
+          method="post"
+          enctype="text/plain"
+          autocomplete="off"
+        >
+          <ul>
+            <li class="contact-form anim">
+              <input type="text" name="name" placeholder="Name"
+              required />
+            </li>
+            <li class="contact-form anim">
+              <input type="email" placeholder="Email" required />
+            </li>
+            <textarea
+              class="anim"
+              placeholder="Message"
+              id="msg-area"
+              cols="20"
+              rows="3"
+            ></textarea>
+          </ul>
+          <button id="submit" onclick="sendbtn()" />
+          <i class="fa fa-send send-icon anim"></i>
+        </form>
+      </div>
+      <div class="locbg">
+          <div class="locbgbg">
+            <div class="loctxt">
+              <h1>i&nbsp;&nbsp;live&nbsp;&nbsp;in&nbsp;&nbsp;kolkata</h1>
+              <p>
+                <br><br><br><br>
+                <b>Phone no:&nbsp;</b>0123456789
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <b>email:&nbsp;</b>example@me.com
+              </p>
+            </div>
+            
+          </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="./tilt.js"></script>
+    <script>
+          VanillaTilt.init(document.querySelector(".locbgbg"), {
+            max: 20,
+            speed: 400,
+            reverse: true, // reverse the tilt direction
+            glare: true , // if it should have a "glare" effect
+            "max-glare": 0.4 // the maximum "glare" opacity (1 = 100%, 0.5 = 50%)
+        });
+    </script>
+    <script>
+      gsap.from(".locbgbg", {
+            delay: 4,
+            duration: 1,
+            opacity: 0,
+            x: 50
+        });
+      gsap.from(".anim", {
+        delay: 1.4,
+        duration: 0.5,
+        opacity: 0,
+        stagger: 0.6,
+        y: 40,
+      });
+    </script>
+  </body>
+</html>
