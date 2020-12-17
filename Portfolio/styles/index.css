@@ -1,0 +1,216 @@
+/****************/
+/***  R LOGO  ***/
+/****************/
+
+.header-text {
+    color: #fff;
+    line-height: 60px !important;
+    margin-left: 170px;
+  }
+  
+  .header-text span {
+    letter-spacing: -7px;
+    margin-top: -2%;
+    font-size: 60px;
+    font-family: 'Oswald';
+    position: relative;
+    display: inline-block;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation: bounce 1s linear 1;
+    animation-delay: calc(50ms * var(--i));
+  }
+  .r {
+    font-size: em;
+    animation: clr 10s infinite;
+  }
+  .r:hover {
+    transition: 700ms;
+  }
+  
+  .header-text span:hover {
+    color: #08fdd8;
+    animation: bouncy 1s;
+  }
+  
+  @keyframes clr {
+    0% {
+      color: #4df57d;
+    }
+    30% {
+      color: #4ca3ff;
+    }
+    60% {
+      color: #ff49e1;
+    }
+    100% {
+      color: #4df57d;
+    }
+  }
+  
+  @keyframes bounce {
+    from {
+        transform: scale3d(1, 1, 1);
+      }
+    
+      30% {
+        transform: scale3d(1.25, 0.75, 1);
+      }
+    
+      40% {
+        transform: scale3d(0.75, 1.25, 1);
+      }
+    
+      50% {
+        transform: scale3d(1.15, 0.85, 1);
+      }
+    
+      65% {
+        transform: scale3d(.95, 1.05, 1);
+      }
+    
+      75% {
+        transform: scale3d(1.05, .95, 1);
+      }
+    
+      to {
+        transform: scale3d(1, 1, 1);
+      }
+  }
+  @keyframes bouncy {
+    from {
+        transform: scale3d(1, 1, 1);
+      }
+    
+      30% {
+        transform: scale3d(1.25, 0.75, 1);
+      }
+    
+      40% {
+        transform: scale3d(0.75, 1.25, 1);
+      }
+    
+      50% {
+        transform: scale3d(1.15, 0.85, 1);
+      }
+    
+      65% {
+        transform: scale3d(.95, 1.05, 1);
+      }
+    
+      75% {
+        transform: scale3d(1.05, .95, 1);
+      }
+    
+      to {
+        transform: scale3d(1, 1, 1);
+      }
+  }
+  
+  #sub-text {
+    display: block;
+    position: absolute;
+    color: #8d8d8d;
+    top: 51%;
+    font-weight: normal;
+    font-size: 13px;
+    font-family: Helvetica;
+    letter-spacing: 2.7px;
+  }
+  
+  .contact-me {
+    position: absolute;
+    color: #08fdd8;
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-family: 'Open Sans', Helvetica;
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 1px solid #08fdd8;
+    top: 75%;
+    margin-left: 170px;
+    float: left;
+  }
+  .contact-me:hover {
+    background: #08fdd8;
+    color: #000;
+    box-shadow: 0 0 10px #08fdd8, 0 0 30px #08fdd89c, 0 0 50px #08fdd862,
+      0 0 80px #08fdd888;
+  }
+  
+  #shel1 {
+    font-family: 'La Belle Aurore';
+    margin-top: 50px;
+    margin-left: 160px;
+    color: #bfb7ab;
+    font-size: 17px;
+  }
+  #shel2 {
+    font-family: 'La Belle Aurore';
+    margin-top: 50px;
+    margin-left: 160px;
+    color: #bfb7ab;
+    font-size: 17px;
+  }
+  #shel3 {
+    position: absolute;
+    font-family: 'La Belle Aurore';
+    top: 83%;
+    left: 160px;
+    color: #bfb7ab;
+    font-size: 17px;
+  }
+  #shel4 {
+    position: absolute;
+    font-family: 'La Belle Aurore';
+    top: 89%;
+    left: 130px;
+    color: #bfb7ab;
+    font-size: 17px;
+  }
+  
+  #text-shell {
+    display: block;
+    position: absolute;
+    font-family: 'La Belle Aurore';
+    left: 40%;
+    color: #bfb7ab;
+    font-weight: normal;
+    top: 45%;
+    font-size: 17px;
+  }
+  
+  .loader {
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    overflow: hidden;
+    transform: rotate(175deg);
+    left: 50%;
+    top: 13%;
+  }
+  
+  .loader span {
+    position: absolute;
+    top: calc(12px * var(--i));
+    bottom: calc(12px * var(--i));
+    left: calc(12px * var(--i));
+    right: calc(12px * var(--i));
+    border: 10px solid #1d1d1d;
+    border-top: 10px solid #fff;
+    border-left: 10px solid #fff;
+    border-radius: 50%;
+    filter: hue-rotate(calc(0deg * var(--i)));
+    animation: round 1s alternate ease-in-out infinite;
+    animation-delay: calc(500ms * var(--i));
+  }
+  
+  @keyframes round {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
