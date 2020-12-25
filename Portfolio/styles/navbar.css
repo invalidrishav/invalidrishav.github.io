@@ -1,69 +1,128 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
-@import url('https://fonts.googleapis.com/icon?family=Source+Code+Pro');
-
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    overflow: hidden;
+    display: block;
+}
 .navbar
 {
-    position: absolute;
+    background: #181818;
+    width: 60px;
+    height: 100%;
+    position: fixed;
     top: 0;
-    left: 0;
-    width: 70px;
-    height: 100vh;
-    background: #121414;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 3;
+    min-height: 500px;
 }
-.navbaricons
+.navbar nav
 {
-    display: grid;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-/* #7F7B74 */
-.navbaricons a
-{
-    padding: 5px;
-    font-size: 27px;
-    color: #7F7B74;
-    background: #121414;
-    width: 70px;
+    display: block;
     text-align: center;
-    transition: 300ms ease-in-out;
 }
-.navbaricons a:hover
+.logo
+{
+    background: rgba(255, 255, 255, 0.1);
+    display: block;
+    padding: 0;
+}
+.logo  img
+{
+    display: block;
+    margin: 8px -10px;
+    width: 85px;
+    height: auto;
+}
+.navbar nav a
+{
+    font-size: 22px;
+    font-family: 'Helvetica Neue', Helvetica;
+    color: #a5a5a5;
+    margin-bottom: 15px;
+    display: block;
+    line-height: 50px;
+    height: 51px;
+    position: relative;
+    text-decoration: none;
+}
+.navbar nav a i
+{
+    transition: all 300ms ease-out;
+}
+.navbar nav a:hover i
 {
     opacity: 0;
 }
-.iconname
+.navbar nav a:active,
+.navbar nav a:hover
 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    color: #08fdd8;
 }
-.iconname p
+.navbar nav a::after
 {
-    color: #20fddc;
-    font-family: 'Source Code Pro';
-    padding: 7px;
-    font-size: 15px;
+    content: '';
+    font-size: 9px;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    width: 100%;
     text-align: center;
-    text-transform: uppercase;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;   
 }
-.NavbarSocialLinks
+.navbar nav a:first-child::after
 {
-    display: grid;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translate(-50%,0);
+    content: 'HOME';
 }
-.NavbarSocialLinks a
+.navbar nav a:first-child + a::after
 {
-    padding: 2px;
-    font-size: 16px;
-    color: #7F7B74;
+    content: 'ABOUT';
 }
-.NavbarSocialLinks a:hover
+.navbar nav a:first-child + a + a::after
 {
-    color: #20fddc;
+    content: 'SKILLS';
+}
+.navbar nav a:first-child + a + a + a::after
+{
+    content: 'WORK';
+}
+.navbar nav a:first-child + a + a + a + a::after
+{
+    content: 'CONTACT';
+}
+.navbar nav a:hover::after
+{
+    opacity: 1;
+}
+/* NAVBAR SOCIAL LINKS */
+.navbar ul
+{
+    display: block;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 20px;
+}
+.navbar ul li a
+{
+    padding: 7px 0;
+    display: block;
+    font-size: 15px;
+    line-height: 16px;
+    color: #909096;
+}
+.navbar ul li a:hover
+{
+    color: #08fdd8;
 }
