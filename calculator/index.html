@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,4 +78,85 @@
         }
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CALCULATOR.css">
+    <script src="./CALCULATOR.js">
+    /**** this script is created by Sergiu Șandor (micku7zu) ****/
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Calculator</title>
+</head>
+<body>
+    <div class="headpage">
+        <h1>js Calculator</h1>
+        <button onclick="fun()">X</button>
+        <p>made by Rishav Mandal</p>
+        <h3>Glass morphic (gaussian blur) UI/UX design
+            compiled with pure javascript.<b> Tilt your phone for 3d effect</b>. View the source code 
+            at <a href="https://github.com/invalidrishav/invalidrishav.github.io/tree/master/calculator">my github page.</a>
+        </h3>
+    </div>
+    <div class="container">
+        <form class="calculator" name="calc">
+            <input type="text" randomly class="value" name="txt" autocomplete="off">
+            <span class="num clear" onclick="calc.txt.value = ''">AC</span>
+            <span class="num" onclick="document.calc.txt.value += '/'">/</span>
+            <span class="num" onclick="document.calc.txt.value += '*'">*</span>
+            <span class="num" onclick="document.calc.txt.value += '7'">7</span>
+            <span class="num" onclick="document.calc.txt.value += '8'">8</span>
+            <span class="num" onclick="document.calc.txt.value += '9'">9</span>
+            <span class="num" onclick="document.calc.txt.value += '-'">-</span>
+            <span class="num" onclick="document.calc.txt.value += '4'">4</span>
+            <span class="num" onclick="document.calc.txt.value += '5'">5</span>
+            <span class="num" onclick="document.calc.txt.value += '6'">6</span>
+            <span class="num plus" onclick="document.calc.txt.value += '+'">+</span>
+            <span class="num" onclick="document.calc.txt.value += '1'">1</span>
+            <span class="num" onclick="document.calc.txt.value += '2'">2</span>
+            <span class="num" onclick="document.calc.txt.value += '3'">3</span>
+            <span class="num" onclick="document.calc.txt.value += '0'">0</span>
+            <span class="num" onclick="document.calc.txt.value += '00'">00</span>
+            <span class="num" onclick="document.calc.txt.value += '.'">.</span>
+            <span class="num equal" onclick="document.calc.txt.value = eval(calc.txt.value)">=</span>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".container"), {
+            max: 15,
+            speed: 400,
+            reverse: true, // reverse the tilt direction
+            glare: true , // if it should have a "glare" effect
+            "max-glare": 0.2 // the maximum "glare" opacity (1 = 100%, 0.5 = 50%)
+        });
+    </script>
+    <script>
+        gsap.from(".container", {
+            duration: 1,
+            opacity: 0,
+        });
+        gsap.from(".headpage", {
+            delay: 1,
+            opacity: 0,
+            y: -40
+        });
+        gsap.to(".headpage",{
+            delay: 17,
+           opacity: 0, 
+            y: -40
+        });
+        function fun()
+        {
+            gsap.to(".headpage",{
+           opacity: 0, 
+            y: -40
+        });
+        }
+    </script>
+</body>
+>>>>>>> f6b8335adb31f6fa3c1dba04f88756cd4fabc6d3
 </html>

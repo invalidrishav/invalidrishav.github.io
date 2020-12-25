@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/icon?family=Poppins');
 
 *
@@ -139,4 +140,147 @@ animation: floating 5s ease-in-out infinite;
     {
         transform: translateY(0px);
     }
+=======
+@import url('https://fonts.googleapis.com/icon?family=Poppins');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    /* iPhone 11 Pro / X - 1 */
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #111111;
+}
+section
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+.eclipse1
+{
+    /* Ellipse 1 */
+position: absolute;
+min-width: 308px;
+height: 296px;
+left: -69px;
+top: 148px;
+border-radius: 50%;
+background: linear-gradient(180deg, #0B8793 0%, rgba(255, 255, 255, 0) 100%), #360033;
+overflow: hidden;
+animation: floating 5s ease-in-out infinite;
+}
+.eclipse2
+{
+/* Ellipse 3 */
+    position: absolute;
+    width: 275px;
+    height: 253px;
+    left: 166px;
+    top: -32px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #00FFFF 0%, rgba(255, 255, 255, 0) 100%), #B70000;
+    overflow: hidden;
+    animation: floating 5s ease-in-out infinite;
+    animation-delay: 2s;
+}
+.eclipse3
+{
+    /* Ellipse 4 */
+    position: absolute;
+    width: 319px;
+    height: 299px;
+    left: 134px;
+    top: 444px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #B578B7 0%, rgba(255, 255, 255, 0) 100%), #71834C;
+    animation: floating 5s ease-in-out infinite;
+    animation-delay: 3s;
+}
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
+}
+.birthdayHeading
+{
+    /* Happy birthday to me */
+    position: absolute;
+    width: 296.63px;
+    height: 185.4px;
+    left: 17px;
+    top: 240.51px;
+
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 47px;
+    line-height: 53px;
+    /* or 113% */
+
+    letter-spacing: 6.3px;
+    text-transform: uppercase;
+
+    color: #4EFFD4;
+    transform: rotate(-0.48deg);
+}
+.box
+{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    bottom: 14%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.box p
+{
+    display: flex;
+    padding: 7px 14px;
+    background: rgba(201, 255, 222, 0.05);
+    border: 1px solid rgba(201, 255, 222, 0.2);
+    border-radius: 6px;
+    font-family: 'poppins', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 21px;
+    letter-spacing: 2px;
+    color: #FFF;
+}
+
+.downArrow
+{
+    /* DOWN ARROW */
+    position: absolute;
+    left: 44.8%;
+    right: 44.53%;
+    top: 88%;
+    bottom: 13.14%;
+    font-size: 40px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    background: none;
+    animation: fade 3s ease infinite;
+}
+@keyframes fade
+{
+    0%
+    {
+        transform: translateY(0px);
+    }
+    50%
+    {
+        transform: translateY(20px);
+    }
+    100%
+    {
+        transform: translateY(0px);
+    }
+>>>>>>> f6b8335adb31f6fa3c1dba04f88756cd4fabc6d3
 }
