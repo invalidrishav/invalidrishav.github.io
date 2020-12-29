@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fffdda;
+}
+
+section {
+    display: block;
+}
+
+#link {
+    text-decoration: underline;
+    color: #179d63;
+}
+
+.workflow {
+    /* workflow */
+
+    position: absolute;
+    left: 50%;
+    top: 3%;
+    transform: translate(-50%, -3%);
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 72px;
+    letter-spacing: 0.07em;
+
+    color: #000000;
+}
+.workflow::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 2px solid #000;
+    border-radius: 13px;
+}
+
+.heading1 {
+    display: block;
+    position: relative;
+    padding-top: 20%;
+}
+
+.heading {
+    display: block;
+    position: relative;
+    margin: 15% 0 5% 10%;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height */
+
+    letter-spacing: 0.03em;
+}
+
+.info {
+    display: block;
+    position: relative;
+    margin: 0 8% 6% 23%;
+    font-size: 18px;
+    line-height: 25px;
+}
+.cta {
+    position: relative;
+}
+.question {
+    display: block;
+    margin: 25% 50% 12% 50%;
+    transform: translate(-50%, 0);
+    width: 45%;
+    height: auto;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0.07em;
+}
+
+img {
+    display: flex;
+}
+
+.joinbtn {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #000;
+    border-radius: 4px;
+    padding: 10px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+h3 {
+    display: block;
+    position: relative;
+    margin: 50% 0 15% 0;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 27px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+h3::before {
+    content: '';
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0 50% 10% 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    border: 2px solid #000;
+    border-radius: 13px;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    flex-direction: row;
+    padding: 20px 10px;
+    padding-top: 0;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    color: #000;
+    text-align: center;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+}
+.list a {
+    flex-direction: column;
+    color: #000;
+    text-decoration: none;
+}
+.list p {
+    flex-direction: column;
+    color: #000;
+    text-decoration: underline;
+}
+
+/* ul {
+    width: 100%;
+    list-style: none;
+    text-decoration: none;
+}
+
+li {
+    display: inline;
+    padding: 0 20px 0 20px;
+    list-style: none;
+    color: #000;
+    text-decoration: none;
+}
+
+li .a {
+    list-style: none;
+    color: #000;
+    text-decoration: none;
+}
+
+.list {
+    text-decoration: none;
+    padding-bottom: 10%;
+    text-align: center;
+    align-items: center;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+
+    letter-spacing: 0.03em;
+    list-style: none;
+    color: #000000;
+} */
