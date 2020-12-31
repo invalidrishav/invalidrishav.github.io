@@ -8,18 +8,19 @@
     </head>
     <body>
         <div class="about">
-            <h1><span>About</span> Us</h1>
-            <p class="hero">
-                we are working effortlessly to make our app stand out and to
-                give you a best and a smooth experiece. Bringing new features to
-                the app every months.
+            <h1><span class="anim">About</span> Us</h1>
+            <div class="line"></div>
+            <p class="hero jsanim">
+                We are working tirelessly to make our app stand out and to give
+                you the best and smooth experience. Bringing new features every
+                month.
             </p>
-            <p class="sub-hero">
-                here are every members behind this beautiful system. A big thank
-                you to them.
+            <p class="sub-hero jsanim">
+                and here are the members of our team. A huge shoutout to all of
+                them.
             </p>
             <div class="about-us">
-                <div class="a a1">
+                <div class="a a1" id="a">
                     <p class="image"></p>
                     <h3>Shourya Sikhar Ghosh</h3>
                     <p>Core developer</p>
@@ -133,8 +134,36 @@
                 </div>
                 <div class="a a5">
                     <p class="image"></p>
-                    <h3>Dipyan</h3>
-                    <p>Core developer</p>
+                    <h3>Aishik Das</h3>
+                    <p>logo designer</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i
+                                    class="fa fa-facebook"
+                                    aria-hidden="true"
+                                ></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i
+                                    class="fa fa-linkedin"
+                                    aria-hidden="true"
+                                ></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-github" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="a a6">
+                    <p class="image"></p>
+                    <h3>Dipyan Mondal</h3>
+                    <p>maintainer</p>
                     <ul>
                         <li>
                             <a href="#">
@@ -161,59 +190,25 @@
                 </div>
                 <div class="footer">
                     <p>
-                        Again A huge huge shoutout to all of our members. thank
-                        you very much guys!
+                        Again thank you to each of you for the collaboration.
+                        Looking forward for the next.
                     </p>
                 </div>
             </div>
         </div>
 
-        <script src="./tilt.js">
-            // Thanks to micku7zu for this awesome script👏👏👏
-        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
         <script>
-            VanillaTilt.init(document.querySelector('.a1'), {
-                max: 25,
-                speed: 400,
-                glare: true,
-                'max-glare': 0.2,
-                reverse: true,
+            gsap.from('.jsanim', {
+                delay: 1,
+                opacity: 0,
+                y: 25,
+                stagger: 0.5,
             });
-            VanillaTilt.init(document.querySelector('.a2'), {
-                max: 25,
-                speed: 400,
-                glare: true,
-                'max-glare': 0.2,
-                reverse: true,
-            });
-            VanillaTilt.init(document.querySelector('.a3'), {
-                max: 25,
-                speed: 400,
-                glare: true,
-                'max-glare': 0.2,
-                reverse: true,
-            });
-            VanillaTilt.init(document.querySelector('.a4'), {
-                max: 25,
-                speed: 400,
-                glare: true,
-                'max-glare': 0.2,
-                reverse: true,
-            });
-            VanillaTilt.init(document.querySelector('.a5'), {
-                max: 25,
-                speed: 400,
-                glare: true,
-                'max-glare': 0.2,
-                reverse: true,
-            });
-            // This is for Aishik Das
-            VanillaTilt.init(document.querySelector('.a6'), {
-                reverse: true,
-                max: 25,
-                speed: 400,
-                glare: true,
-                'max-glare': 0.2,
+            gsap.from('.about-us', {
+                delay: 2,
+                opacity: 0,
+                y: 100,
             });
         </script>
     </body>

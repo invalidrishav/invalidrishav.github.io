@@ -19,20 +19,21 @@ h1 {
     font-size: 64px;
 }
 h1 span {
+    display: inline-block;
     color: #808080;
+    animation: anim 700ms 1 linear;
 }
-/* h1::before {
-    content: '';
-    display: block;
-    width: 60%;
-    margin-left: 50%;
-    transform: translate(-50%);
-    text-align: center;
-    height: 0;
-    border: 2px solid #000;
-    border-radius: 15px;
-} */
-h1::after {
+@keyframes anim {
+    0% {
+        transform: translate3d(0, -20px, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+/* h1::after {
     content: '';
     margin-top: 20px;
     display: block;
@@ -43,6 +44,26 @@ h1::after {
     height: 0;
     border: 1px solid #646464;
     border-radius: 15px;
+} */
+.line {
+    margin-top: 20px;
+    display: block;
+    width: 80%;
+    margin-left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    height: 0;
+    border: 1px solid #646464;
+    border-radius: 15px;
+    animation: wide 500ms 1 linear;
+}
+@keyframes wide {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80%;
+    }
 }
 p {
     display: inline-block;
@@ -55,9 +76,8 @@ p {
     font-weight: 400;
     text-align: left;
     padding: 0 5%;
-    text-transform: capitalize;
     line-height: 150%;
-    letter-spacing: 1px;
+    letter-spacing: 1.3px;
 }
 .sub-hero {
     margin-top: 15%;
@@ -75,7 +95,7 @@ p {
     flex-direction: column;
     align-items: center;
     height: 100%;
-    background-color: #000;
+    background-color: #181818;
 }
 .about-us .a {
     position: relative;
@@ -100,6 +120,9 @@ p {
     background: rgba(255, 255, 255, 0.7);
     margin: 20px 0;
     border-radius: 50%;
+}
+#a {
+    margin-top: 50px;
 }
 .a h3 {
     font-weight: 600px;
@@ -137,4 +160,11 @@ ul li a {
     text-transform: capitalize;
     letter-spacing: 1px;
     font-weight: 450px;
+}
+@media only screen and (min-width: 1024px) {
+    h1::after {
+        width: 75%;
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
 }

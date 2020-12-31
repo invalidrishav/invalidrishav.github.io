@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body {
@@ -66,6 +67,14 @@ section {
     letter-spacing: 0.03em;
 }
 
+span {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+#bold {
+    font-weight: 600;
+    text-transform: none;
+}
 .info {
     display: block;
     position: relative;
@@ -76,13 +85,15 @@ section {
 .cta {
     position: relative;
 }
+.npm {
+    position: relative;
+    left: 50%;
+    top: 40px;
+    transform: translate(-42%);
+    height: 50%;
+    width: 174px;
+}
 .question {
-    display: block;
-    margin: 25% 50% 12% 50%;
-    transform: translate(-50%, 0);
-    width: 45%;
-    height: auto;
-
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
@@ -104,8 +115,9 @@ img {
     flex: 1;
 
     position: absolute;
+    top: 230px;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%);
     background: #000;
     border-radius: 4px;
     padding: 10px;
