@@ -167,3 +167,30 @@ ul li a {
         transform: translate(-50%);
     }
 }
+@media (min-width: 1024px) {
+    .line {
+        width: 60%;
+    }
+    .hero {
+        width: 60%;
+    }
+    .sub-hero {
+        width: 60%;
+    }
+    .about-us {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+    .about-us .a {
+        width: 300px;
+        margin: 50px auto;
+    }
+    #b {
+        margin-top: 0px;
+    }
+    .about-us .footer {
+        grid-column: 1/4;
+    }
+}
