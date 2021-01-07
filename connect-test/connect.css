@@ -24,18 +24,32 @@
     font-family: glory bold;
 }
 body {
-    background: #fffefa;
+    background: #fff4df;
     background-repeat: no-repeat;
     color: #2e2e2e;
 }
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 244, 223, 0.5);
+    /* box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.07); */
+    backdrop-filter: blur(10px);
+}
 nav {
     width: 90%;
-    height: 10vh;
+    min-height: 10vh;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-transform: capitalize;
+}
+.bubble {
+    position: absolute;
+    z-index: -2;
+    border-bottom: 1.3px solid #333;
+    transform: scale(1.04);
+    margin-top: 5px;
 }
 .logo {
     font-family: 'glory bold';
@@ -53,13 +67,14 @@ li a {
     text-decoration: none;
     color: #2e2e2e;
 }
-.active {
+/* .active {
     color: #929292;
     border-bottom: 1px solid #929292;
-}
-#download span {
+} */
+#downloadBtn span {
     color: #fff;
     background: #000;
+    border-radius: 2px;
     padding: 0px 3px;
 }
 .img {
@@ -97,6 +112,8 @@ li a {
     object-fit: cover;
 }
 section {
+    height: 90vh;
+    overflow: hidden;
     font-family: 'glory light';
     text-align: center;
     margin: 100px;
@@ -123,4 +140,9 @@ section a {
     border: 2.3px solid #000;
     padding: 15px 30px;
     border-radius: 7px;
+    transition: 300ms;
+}
+section a:hover {
+    font-size: 35px;
+    font-family: serif;
 }

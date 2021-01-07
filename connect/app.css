@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Gilory Light;
+    text-transform: capitalize;
+}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: Gilory Xbold;
+    src: url('./fonts/Gilroy-ExtraBold.otf');
+}
+@font-face {
+    font-family: Gilory Light;
+    src: url('./fonts/Gilroy-Light.otf');
+}
+body {
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+header {
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(242, 245, 243, 0.07);
+    backdrop-filter: blur(20px);
+    z-index: 20;
+}
+header nav {
+    height: 80px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav h1,
+nav ul {
+    text-transform: capitalize;
+    font-size: 1.5vw;
+    font-family: serif;
+    flex: 1;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+}
+/* MAIN SECTION: HERO */
+main section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-top: 10%;
+}
+main section .hero {
+    text-align: center;
+    font-size: 3.5vw;
+    width: 40%;
+    height: 100%;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+main section .hero h1 {
+    display: none;
+}
+main section p {
+    margin-bottom: 20px;
+}
+#logo {
+    animation: bg 700ms ease forwards 3.7s;
+}
+#logo path:nth-child(2) {
+    stroke-dasharray: 268.69;
+    stroke-dashoffset: 268.69;
+    animation: animate 2s ease forwards;
+}
+#logo path:nth-child(3) {
+    stroke-dasharray: 262.87;
+    stroke-dashoffset: 262.87;
+    animation: animate 2s ease forwards 300ms;
+}
+#logo path:nth-child(4) {
+    stroke-dasharray: 262.87;
+    stroke-dashoffset: 262.87;
+    animation: animate 2s ease forwards 600ms;
+}
+#logo path:nth-child(5) {
+    stroke-dasharray: 314.19;
+    stroke-dashoffset: 314.19;
+    animation: animate 2s ease forwards 900ms;
+}
+#logo path:nth-child(6) {
+    stroke-dasharray: 239.48;
+    stroke-dashoffset: 239.48;
+    animation: animate 2s ease forwards 1200ms;
+}
+#logo path:nth-child(7) {
+    stroke-dasharray: 239.48;
+    stroke-dashoffset: 239.48;
+    animation: animate 2s ease forwards 1500ms;
+}
+#logo path:nth-child(8) {
+    stroke-dasharray: 268.69;
+    stroke-dashoffset: 268.69;
+    animation: animate 2s ease forwards 1800ms;
+}
+@keyframes animate {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+/*!!! this filling is not working */
+@keyframes bg {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: black;
+    }
+}
+main section .hero .sub-text {
+    font-size: 2.3vw;
+    text-transform: none;
+    margin-top: 40px;
+}
+#about {
+    height: 100%;
+}
+#about p {
+    text-transform: uppercase;
+    font-size: 3vw;
+    margin-left: 5%;
+    width: 30%;
+    height: auto;
+}
+#about .sub-header {
+    font-size: 2.3vw;
+    letter-spacing: 2px;
+    line-height: 50px;
+    width: 55%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+    padding-top: 50px;
+}
+#about .our-photos {
+    margin-top: 5.5em;
+    margin-bottom: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#about .our-photos img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+#download p {
+    font-size: 4.3vw;
+    margin-top: 50px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+#download a {
+    font-size: 3vw;
+    margin-left: 40%;
+    transform: translateX(-40%);
+
+    text-decoration: none;
+    padding: 20px 35px;
+    border: 2px solid black;
+    border-radius: 7px;
+    color: black;
+}
+#contact .header {
+    margin: 5%;
+    width: auto;
+    margin-top: 0;
+}
+#contact p {
+    font-size: 4vw;
+    line-height: 80px;
+    margin-top: 0;
+}
+#contact .last {
+    width: 500px;
+    line-height: 30px;
+    margin-top: 20px;
+    font-size: 2vw;
+}
+#contact .contact-form {
+    display: flex;
+    flex-direction: column;
+}
+#name,
+#email,
+#msg {
+    width: 500px;
+    height: 45px;
+    margin: 15px 0px;
+    margin-left: 5%;
+    font-size: 1.3vw;
+
+    outline: none;
+    border: none;
+    border-radius: 0.2em;
+    border-bottom: 2px solid #5f9fff;
+    background: #f5f5f5;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+#msg {
+    height: 100px;
+}
+#send-btn svg {
+    position: relative;
+    left: 550px;
+    width: 60px;
+    height: 60px;
+}
+main section button {
+    height: 0px;
+    width: 0px;
+    cursor: pointer;
+}
+#send-btn:focus + #msg-notify {
+    opacity: 1;
+    transform: translateY(0px);
+    pointer-events: all;
+}
+#msg-notify {
+    width: 20%;
+    height: 20%;
+    background-color: #f5f5f5;
+    position: relative;
+    left: 550px;
+    top: 20px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translateY(100px);
+}
+/* MEDIA QUERY DESKTOP */
+
+@media only screen and (max-width: 768px) {
+    main section .hero {
+        text-align: left;
+        font-size: 48px;
+        width: 95%;
+        margin: auto;
+    }
+    main section .hero h1 {
+        display: block;
+    }
+    #logo {
+        display: none;
+    }
+    main section .hero .sub-text {
+        font-size: 36px;
+        width: 90vw;
+    }
+    main section .hero span {
+        display: none;
+    }
+    #about p {
+        font-size: 48px;
+        width: 95%;
+    }
+    #about .our-photos {
+        flex-direction: column;
+    }
+    #about .sub-header {
+        margin-top: -10%;
+        line-height: 200%;
+        font-size: 0.7em;
+        width: 65%;
+    }
+    #download p {
+        font-size: 2.3em;
+        width: 90%;
+    }
+    #download a {
+        position: relative;
+        top: -10%;
+        left: -5%;
+
+        padding: 10px;
+        font-size: 1.2em;
+    }
+    #contact .heading {
+        font-size: 10vw;
+        width: 90%;
+
+        line-height: 145%;
+    }
+    #contact .last {
+        font-size: 5.5vw;
+        width: 100%;
+    }
+    #name,
+    #email,
+    #msg {
+        width: 300px;
+        height: 35px;
+
+        font-size: 3.5vw;
+    }
+    #msg {
+        height: 70px;
+    }
+    #send-btn svg {
+        left: 270px;
+    }
+    #msg-notify {
+        left: 5%;
+        top: 50%;
+        transform: translate(-5%, -15%);
+
+        width: 60%;
+        height: auto;
+    }
+}

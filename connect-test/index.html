@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>content</title>
+        <link rel="stylesheet" href="connect.css" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo">
+                    <h3>logo/tagline</h3>
+                </div>
+                <div class="source">
+                    <ul>
+                        <li>
+                            <a data-page="home" href="#home" class="active">home</a>
+                        </li>
+                        <li>
+                            <a data-page="download" id="downloadBtn" href="#download">Down<span>load</span></a>
+                        </li>
+                        <li>
+                            <a data-page="about" href="#">about</a>
+                        </li>
+                        <li>
+                            <a data-page="contact" href="#">contact</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg width="35" height="20" viewBox="0 0 60 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 1.5H60M0 24.5H60" stroke="black" stroke-width="1.5"/>
+                                    <path d="M20 13.5H60" stroke="black" stroke-width="1.5"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <div class="bubble"></div>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Main section HOME -->
+        <section class="home" data-index="0">
+            <div class="img2">
+                <img src="./img/app1.png" alt="ufff">
+            </div>
+            <div class="img">
+                <img src="./img/app1.png" alt="ufff">
+            </div>
+            <h3>Welcome to a new kind of social media app. Designed for the social media lovers with a bit of fashion-</h3>
+            <h1>connect</h1>
+            <a href="#">learn more</a>
+        </section>
+        <!-- section DOWNLOAD -->
+        <section class="download"  data-index="1">
+            <h1>downloads</h1>
+        </section>
+<!-- section ABOUT -->
+        <section class="about" data-index="2">
+            <h1>about us</h1>
+        </section>
+<!-- section CONTACT -->
+        <section class="contact"  data-index="3">
+            <h1>contact us</h1>
+        </section>
+
+
+
+        <script src="./connect.js"></script>
+<!-- liraries -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+<script>
+    gsap.from('body',{
+        delay: 1, opacity: 0
+    });
+    gsap.from('header',{
+        delay: 1.5, y: -100
+    });
+    gsap.from('.img',{
+        delay: 2.5, opacity: 0, y: 70
+    });
+    gsap.from('.img2',{
+        delay: 2, opacity: 0, y: 50
+    });
+</script>
+    </body>
+</html
