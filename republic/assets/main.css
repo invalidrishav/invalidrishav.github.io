@@ -1,0 +1,293 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+}
+:root {
+    --bg-color: #000;
+    --text-color: aliceblue;
+    --fs-paragraphs: 1.5vw;
+    --fs-heading: 2.3vw;
+    --fs-big-heading: 5vw;
+}
+
+img {
+    object-fit: cover;
+}
+
+html,
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    color: #1f1f1f;
+    background: rgb(226, 123, 26);
+}
+
+/* *PRELOADER */
+
+.preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    z-index: 999999999;
+}
+
+.preloader h1 {
+    color: aliceblue;
+    font-size: 2vw;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+.preloader h1::after {
+    content: '';
+    width: 60%;
+    background: aliceblue;
+    border-bottom: 1px solid white;
+}
+
+.preload__end {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dark_overlay_for_nice_start_up_animation,
+.dark_overlay_just_to_add_a_darker_gradient_shadow_on_the_hero_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    width: 100%;
+    height: 100vh;
+}
+
+.dark_overlay_just_to_add_a_darker_gradient_shadow_on_the_hero_image {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2) 60%,
+        rgba(0, 0, 0)
+    );
+}
+
+section.home {
+    width: 100%;
+    height: 100vh;
+}
+section.home img {
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+section .home--text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+}
+
+section .home--text .home--text_ h1 {
+    font-size: var(--fs-big-heading);
+    font-weight: 500;
+    color: aliceblue;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.111;
+    letter-spacing: 7.5px;
+    overflow: hidden;
+}
+
+/* *SECTION HISTORY */
+
+section.history {
+    width: 100%;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-weight: 300;
+    padding: 5rem 0;
+}
+
+section.history .history--info {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+section.history .second {
+    flex-direction: row-reverse;
+}
+
+section.history .history--info img {
+    width: 25vw;
+    height: 50vh;
+    object-fit: cover;
+    display: block;
+}
+
+section.history .history--info_text {
+    width: 45%;
+    font-size: var(--fs-paragraphs);
+}
+section.history .history--info_text strong {
+    font-size: var(--fs-heading);
+    width: 100%;
+    position: relative;
+}
+section.history .history--info_text p {
+    padding-top: 1rem;
+}
+section.history .history--info_text strong::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    display: block;
+    width: 100%;
+    border-top: 1px solid var(--text-color);
+    border-bottom: 2.5px solid var(--text-color);
+    padding-top: 0.2rem;
+}
+
+/* *SECTION COLLAGE */
+
+section.collage {
+    width: 100%;
+    height: 100%;
+    background: #f4f4f4;
+    color: rgb(226, 123, 26);
+    font-weight: 300;
+}
+
+section.collage img {
+    width: 100%;
+    height: 100%;
+}
+
+section.collage .the_background_text,
+section.collage .the_background_text--last {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: var(--fs-big-heading);
+    text-transform: uppercase;
+}
+.last__text_ {
+    font-size: 2vw;
+}
+
+section.collage .collage--images {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+section.collage .collage--images .img1,
+section.collage .collage--images .img2,
+section.collage .collage--images .img3,
+section.collage .collage--images .img4,
+section.collage .collage--images .img5,
+section.collage .collage--images .img6 {
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section.collage .collage--images .img1 {
+    background-image: url(./images/Collage__1.jpeg);
+}
+
+section.collage .collage--images .img2 {
+    background-image: url(./images/Collage__2.jpeg);
+}
+
+section.collage .collage--images .img3 {
+    background-image: url(./images/Collage__3.jpeg);
+}
+
+section.collage .collage--images .img4 {
+    background-image: url(./images/Collage__4.jpeg);
+}
+
+section.collage .collage--images .img5 {
+    background-image: url(./images/Collage__5.jpeg);
+}
+
+section.collage .collage--images .img6 {
+    background-image: url(./images/Collage__6.jpg);
+}
+
+section.collage .the_background_text--last {
+    flex-direction: column;
+}
+
+/* *LAST PAGE */
+
+section.last_page {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: #f4f4f4;
+
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.container span {
+    width: 3.3vw;
+    height: 100%;
+    background: white;
+    border-top: 33.333vh solid #ff9933;
+    border-bottom: 33.333vh solid #138808;
+}
+
+.container .wheel {
+    max-height: 33.333vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
