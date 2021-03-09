@@ -1,0 +1,46 @@
+* {
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+div {
+    width: 320px;
+    height: 250px;
+    padding: 0.7em;
+
+    display: grid;
+    place-content: center;
+    background: #f3f3f3;
+    border: 1px solid #bacdd8;
+    border-radius: 12px;
+    margin: 30vh 0 2em 0;
+    transform: translateY(-10%);
+}
+
+p {
+    padding: 0.5em 0;
+}
+
+button {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+
+    font-weight: 600;
+    color: #0077ff;
+    background-color: #e0efff;
+}
+
+button:focus,
+button:hover {
+    background-color: #0077ff;
+    color: #e0efff;
+}
